@@ -1,0 +1,114 @@
+<html>
+ <head>
+  <style type="text/css">
+   #header
+   {
+     width:1200px;
+     height:1500px;
+     background-color:black;
+   }
+   #header #headbar
+   {
+     position:fixed;
+     top:50px;
+     width:1200px;
+     height:100px;
+     background-color:red;
+     z-index:999;
+   }
+   
+   #header #headbar h1
+   {
+     position:relative;
+     bottom:10px;
+   }
+   #header #h
+   { 
+    position:relative;
+    top:400px;
+    color:white;
+   }
+   #d1
+   {
+     position:absolute;
+     top:280px;
+     left:100px;
+     width:100px;
+     height:100px;
+     background-color:silver;
+  }
+  #header #headbar .c1
+  {
+    bottom:5px;
+  }
+  </style>
+  <title>Example</title>
+ </head>
+ <body>
+  <div id="header">
+   <div id="headbar">
+    <h1 style="text-decoration:underline;text-align:center;">Welcome</h1>
+    <a href="home.html"><em>Home</em></a>
+     <input class="c1" type="button" value="Click to view date" onclick="clickdate()"/>
+     <input class="c1" type="button" value="Click to enter a name" onclick="clickable()"/>
+    </div>
+     <div id="d1">
+     </div>
+    <h1 id="h">Learning is simple</h1>
+    <script>mysignature();</script>
+  </div>
+  <script>
+   function clickdate()
+   {
+    var obj=new Date();
+    document.write(obj);
+   }
+   function mysignature()
+   {
+    document.write("Bhavya Thakkar");
+   }
+   function clickable()
+   {
+    x=prompt("Enter you name","eg.John Salvatore");
+    if(x!=null)
+     document.write(x);
+   }
+   function area(length,breadth)
+   {
+     var len=document.getElementsByName("length")[0].value;
+     var bre=document.form1.breadth.value;
+     var area=len*bre;
+     alert("Area:"+area);
+   }
+  var str=new String("Afternoon");
+  var str1=new String("Bhavya Thakkar");
+  var str2=str.replace("Afternoon","Noon");
+  document.write(str1.substring(1,8)+"<br/>");
+  document.write(str2.concat(" ",str1)+"<br/>");
+  var re=new RegExp("Thakkar","m");
+  var result=re.test(str1);
+  document.write(result);
+  function circle()
+{
+  var r=document.getElementById("p1").value;
+  var res=(Math.PI*Math.pow(r,2));
+  alert(res);
+}
+  </script>
+  <form name="form1">
+  <table>
+   <tr>
+    <td>Length:</td>
+    <td><input type="text" name="length"></td>
+   </tr>
+   <tr>
+    <td>Breadth:</td>
+    <td><input type="text" name="breadth"></td>
+   </tr>
+   <td><input type="button" value="area" onclick="area(length,breadth)"/>
+  </table>
+  radius=<input type="text" id="p1"/>
+  <input type="button" value="Circle" onclick="circle()"/>
+  </form>
+ </body>
+</html>

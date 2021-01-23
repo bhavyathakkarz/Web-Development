@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Dice Game</title>
+  <style type="text/css">
+  *
+  {
+    margin:0;
+    padding:0;
+  }
+  #b
+  {
+    width:70%;
+    position:relative;
+    margin:auto;
+    text-align:center;
+  }
+  body
+  {
+    background-color:Black;
+    font-family:comic sans ms;
+  }
+  img
+  {
+    width:70%;
+    height:250px;
+  }
+  p
+  {
+    color:Red;
+    text-shadow:3px 3px 2px purple;
+    font-size:42px;
+  }
+  .p1
+  {
+    display:inline-block;
+    text-align:center;
+  }
+  button
+  {
+    width:90px;
+    height:50px;
+    color:White;
+    background-color:lime;
+    font-size:32px;
+    border-radius:5px;
+    margin:auto;
+    border:none;
+  }
+  </style>
+ </head>
+ <body>
+  <div id="b">
+   <h1 id="t" style="color:khaki; font-style:Italic; font-size:58px; text-decoration:underline; text-shadow:2px 2px 3px darkblue">DICEE GAME</h1>
+   <div class="p1">
+     <p>Player 1</p>
+     <img id="play1" src="dice1.png"/>
+   </div>
+   <div class="p1">
+     <p>Player 2</p>
+     <img id="play2" src="dice2.png"/>
+   </div>
+   <br/><br/>
+   <div>
+    <button onclick="game()">Dice</button>
+   </div>
+   <br/><br/>
+   <div>
+    <audio controls loop autoplay>
+     <source src="Faded.mp3" type="audio/mpeg">
+    </audio>
+   </div>
+  </div>
+  <script>
+   function game()
+   {
+     
+     var b=Math.floor(Math.random()*6)+1;
+     var play1=`dice${b}.png`;
+     document.getElementById("play1").setAttribute("src",play1);
+     var p=Math.floor(Math.random()*6)+1;
+     var play2=`dice${p}.png`;
+     document.getElementById("play2").setAttribute("src",play2); 
+   
+    if(b>p)
+      document.getElementById("t").innerHTML="Player1 Won :)";
+    else if(b==p)
+      document.getElementById("t").innerHTML="Draw :(";
+    else
+      document.getElementById("t").innerHTML="Player2 Won :)";
+   }
+  </script>
+ </body>
+</html>

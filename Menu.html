@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>BB Menu</title>
+  <style type="text/css">
+   a:link
+   {
+     font-size:34px;
+   }
+   a:visited
+   {
+     font-size:34px;
+     color:purple;
+   }
+   a:hover
+   {
+     color:darkblue;
+     text-decoration:none;
+     font-family:Calibri;
+     font-size:34px;
+   }
+   a:active
+   {
+     color:khaki;
+     text-decoration:through;
+     font-family:Calibri;
+     font-size:34px;
+   }
+   td
+   {
+     font-size:32px;
+   }
+   .c2
+   {
+     color:darkblue;
+     font-style:Italic;
+     text-decoration:Underline;
+     font-size:40px;
+   }
+   .c1
+   {
+     color:red;
+     font-size:48px;
+   }
+   body
+   {
+     background-color:black;
+   }
+  </style>
+ </head>
+ <body>
+  <h1 style="text-align:center; color:khaki; font-style:Italic; font-size:58px; text-decoration:underline; text-shadow:2px 2px 3px darkblue">Menu-Card</h1>
+  <h1 id="p1" style="text-align:right;color:lime;font-family:comic sans ms"></h1>
+  <h1 id="p4" style="text-align:right;color:lime;font-family:comic sans ms"></h1>
+  <input type="text" id="t1" placeholder="Enter a food item..." style="width:100%;height:40px;color:darkblue;border-radius:10px;border:groove 5px purple;font-size:18px;align:Center;" onkeyup="searchfn();"/><br/><br/>
+  <table id="t2" bgcolor="yellow" cellspacing=0px width=100% border=2px style="position:relative;">
+   <tr>
+    <th class="c1">Sr.No</th>
+    <th class="c1">Food Items</th>
+    <th class="c1">Price</th>
+   </tr>
+   <tr>
+    <th colspan="3"class="c2">Hot Beverages</th>
+   </tr>
+   <tr>
+    <td>1.</th>
+    <td>Green Tea</th>
+    <td>70.00</th>
+   </tr>
+   <tr>
+    <td> 2. </td>
+    <td>Masala Tea</td>
+    <td>50.00</td>
+   </tr>
+   <tr>
+    <td>3.</td>
+    <td>Hot Coffee</td>
+    <td>80.00</th>
+   </tr>
+   <tr>
+    <td>4.</td>
+    <td>Hot Chocolate</td>
+    <td>100.00</td>
+   </tr>
+   <tr>
+    <td>5.</td>
+    <td>Cramel Hot Chocolate</td>
+    <td>130.00</td>
+   </tr>
+   <tr>
+    <th colspan="3" class="c2">Italian</th>
+   </tr>
+   <tr>
+    <td>1.</th>
+    <td>White Sauce Pasta</th>
+    <td>170.00</th>
+   </tr>
+   <tr>
+    <td> 2. </td>
+    <td>Red Sauce Pasta</td>
+    <td>180.00</td>
+   </tr>
+   <tr>
+    <td>3.</td>
+    <td>BB Special Pizza</td>
+    <td>250.00</th>
+   </tr>
+   <tr>
+    <td>4.</td>
+    <td>Onion Pizza</td>
+    <td>120.00</td>
+   </tr>
+   <tr>
+    <td>5.</td>
+    <td>Washington Pizza</td>
+    <td>210.00</td>
+   </tr>
+   <tr>
+    <th colspan="3" class="c2">Chinese</th>
+   </tr>
+   <tr>
+    <td>1.</th>
+    <td>Hakka Noodles</th>
+    <td>140.00</th>
+   </tr>
+   <tr>
+    <td> 2. </td>
+    <td>Schezwan Noodles</td>
+    <td>170.00</td>
+   </tr>
+   <tr>
+    <td>3.</td>
+    <td>Fried Rice</td>
+    <td>180.00</th>
+   </tr>
+   <tr>
+    <td>4.</td>
+    <td>Triple Schezwan Fried Rice</td>
+    <td>220.00</td>
+   </tr>
+   <tr>
+    <td>5.</td>
+    <td>Chilly Garlic Noodles</td>
+    <td>210.00</td>
+   </tr>
+  </table>
+  <br/><br/><br/><br/><br/>
+  <a href="home.html">Previous</a><br/><br/><br/>
+  <a href="Ambiance.html">Next</a><br/><br/><br/>
+  <a href="dicegame.html">Play</a>
+  <script>
+   function searchfn()
+   {
+     var name=document.getElementById("t1").value.toUpperCase();
+     var tbl=document.getElementById("t2");
+     var tr=tbl.getElementsByTagName("tr");
+     for(var i=0;i<tr.length;i++)
+     {
+       var td=tr[i].getElementsByTagName("td")[1];
+       if(td)
+       {
+         var txt=td.innerHTML;
+         if(txt.toUpperCase().indexOf(name)>-1)
+         {
+           tr[i].style.display="";
+         }
+         else 
+           tr[i].style.display="none";
+       }
+     }
+   }
+   var d=new Date();
+   var dte=d.getDate();
+   var m=d.getMonth()+1;
+   var y=d.getFullYear();   
+   document.getElementById("p1").innerHTML=dte+"/"+m+"/"+y;
+  function dt()
+  {
+   var d=new Date();
+   var b=d.toLocaleTimeString();
+   document.getElementById("p4").innerHTML=b;
+  }
+  var t=setInterval(dt,1000);
+  </script>
+ </body>
+</html>

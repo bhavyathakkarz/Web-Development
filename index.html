@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title align>BB cafe</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquerymin.js"></script>
+  <style type="text/css">
+   h1
+   {
+    position:relative; 
+    color:red;
+    text-align:center;
+    font-size:58px;
+    text-decoration:underline;
+    font-style:italic;
+    border-style:groove;
+    border-radius:10px;
+    border-color:orange;
+    text-shadow:2px 2px 3px darkblue;
+   }
+   td.c1
+   {
+    color:khaki;
+    text-shadow:2px 2px 3px yellow;
+    text-decoration:underline;
+   }
+   body
+   {
+    font-size:30px;
+    font-family:comic sans ms;
+    background-color:black;
+   }
+   option.c1
+   {
+    color:red;
+   }
+   a:visited
+   {
+     color:purple;
+   }
+   a:hover
+   {
+     color:darkblue;
+     text-decoration:none;
+     font-family:Calibri;
+   }
+   a:active
+   {
+     color:khaki;
+     text-decoration:through;
+     font-family:Calibri;
+   }
+   #b
+   {
+     background-color:Lime;
+     color:purple;
+     width:130px;
+     border:none;
+     font-size:30px;
+   }
+   #b1
+   {
+     background-color:Red;
+     color:darkblue;
+     width:120px;
+     border:none;
+     font-size:30px;
+   }
+  </style>
+ </head>   
+ <body>
+  <h1>&dagger;   BB CAFE   &dagger;</h1>
+  <img src="pexels-photo-597933.jpeg" alt="mypic" align="right" width="1300px"/>
+  <form action="cafe.php" method="post">
+   <table cellpadding="30px">
+    <tr>
+     <td class="c1">Username</td>
+     <td><input type="text" name="username" required/></td>
+    </tr>
+    <tr>
+     <td class="c1" id="p1">Password</td>
+     <td><input type="password" name="password" required/></td>
+    </tr>
+    <tr>
+     <td class="c1">Gender</td>
+     <td  style="color:pink;"><input type="radio" name="gender" required/>Male <input type="radio" name="gender" required/>Female</td>
+    </tr>
+    <tr>
+     <td class="c1">Favourites</td>
+     <td style="color:lime;"><input type="checkbox" name="Italian"/>Italian <input type="checkbox" name="Chinese"/>Chinese</td>
+    </tr>
+    <tr>
+     <td class="c1">City</td>
+     <td><select style="width:120px;height:35px;">
+      <option class="c1">Mumbai</option>
+      <option class="c1">Bhuj</option>
+      <option class="c1">Hyderabad</option>
+     </select></td>
+    </tr>
+    <tr>
+     <td><input type="Submit" value="Register" onclick="successfully()" id="b"/></td>
+     <td ><input type="Reset" id="b1"/></td>
+    </tr>
+   </table>
+  </form>
+   <a href="Menu.html">Click Here to View BB Menu</a><br/><br/>
+   <a href="Ambiance.html">Click Here to View BB Ambiance</a>
+  <script>
+   function successfully()
+   {
+     alert("Registered Successfully!!!");
+   }
+  </script>
+ </body>
+</html>

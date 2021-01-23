@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Clock</title>
+  <style type="text/css">
+   #container
+   {
+     height:84.5vh;
+     width:40vw;
+     position:relative;
+     margin:auto;
+     background-image:url('clock.png');
+     background-repeat:no-repeat;
+     background-size:100%;
+   }
+   #hour
+   {
+     height:75px;
+     border-radius:7px;
+     width:10px;
+     background-color:black;
+     position:absolute;
+     top:112.7px;
+     left:186.5px;
+     opacity:2px;
+     transform-origin:bottom;
+   }
+   #minute
+   {
+     height:100px;
+     border-radius:7px;
+     width:10px;
+     background-color:black;
+     position:absolute;
+     top:88.7px;
+     left:187px;
+     opacity:2px;
+     transform-origin:bottom;
+    
+   }
+   #seconds
+   {
+     height:125px;
+     border-radius:7px;
+     width:7px;
+     background-color:black;
+     position:absolute;
+     top:70px;
+     left:187px;
+     opacity:2px;
+     transform-origin:bottom;
+   }
+  </style>
+ </head>
+ <body>
+  <div id="container">
+   <div id="hour"></div>
+   <div id="minute"></div>
+   <div id="seconds"></div>
+   <script>
+    function time()
+    {
+      var d=new Date();
+      var hr=d.getHours();
+      var m=d.getMinutes();
+      var s=d.getSeconds();
+      var htime=30*hr+m/2;
+      var mtime=6*m;
+      var stime=6*s;
+      hour.style.transform=`rotate(${htime}deg)`;
+      minute.style.transform=`rotate(${mtime}deg)`;
+      seconds.style.transform=`rotate(${stime}deg)`;
+   }
+   setInterval(time,1);
+  </script>
+ </body>
+</html>
