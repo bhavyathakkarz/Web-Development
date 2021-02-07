@@ -1,0 +1,161 @@
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		 }
+		body{
+			overflow-x: hidden;
+			font-size: 24px;
+			font-family: 'Flamenco', cursive;
+		}
+		.head{
+			height: 100vh;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url('../images/background.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.d1{
+			max-width: 1180px;
+			margin: 0 auto;
+		}
+		.d1 ul{
+			float: right;
+			margin-top: 60px;
+		}
+		.d1 ul li{
+			display: inline-block;
+			list-style: none;
+		}
+		.d1 ul a{
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			margin-left: 40px;
+			margin-bottom: 20px;
+			transition: border-bottom 0.5s linear;
+			transition: color 0.5s linear;
+			transition: font-size 0.5s linear;
+
+			}
+		.d1 ul a:hover{
+			color: purple;
+			font-size: 150%;
+			border-bottom: 2px solid violet;
+		}
+		.clearfix:after{
+			content: "";
+			visibility: hidden;
+			display: block;
+			clear: both;
+			height: 0px;
+		}
+		.d2{
+			width: 1180px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.d2 h1{
+			text-transform: uppercase;
+			word-spacing: 5px;
+			letter-spacing: 3px;
+			color: white;
+		}
+		span{
+			animation: clr 4s linear infinite;
+		}
+		@keyframes clr{
+			0%{
+				color: greenyellow;
+			}
+			25%{
+				color: red;
+			}
+			50%{
+				color: lime;
+			}
+			100%{
+				color: yellow;
+			}
+		}
+		.btn1{
+			border-radius: 200px;
+			border: 5px solid white;
+			background: transparent;
+			color: white;
+			padding: 10px 20px;
+			text-decoration: none;
+			font-size: 180%;
+			margin-right: 50px;
+			font-weight: bold;
+			transition: background 0.4s linear;
+		}
+		.btn1:hover{
+			background: purple;
+		}
+		.btn2{
+			border-radius: 200px;
+			border: 5px solid lightyellow;
+			background: transparent;
+			color: greenyellow;
+			padding: 10px 20px;
+			text-decoration: none;
+			font-size: 180%;
+			font-weight: bold;
+			transition: background 0.4s linear;
+		}
+		.btn2:hover{
+			background: seagreen;
+		}
+		.mobile-icon{
+			display: none;
+		}
+		@media only screen and (max-width:1180px){
+			.d2{
+				width: 100%;
+				padding:0 2%;
+			}
+		}
+		@media only screen and (max-width:998px){
+			h1{
+				font-size: 200%;
+			}
+		}
+		@media only screen and (max-width:768px){
+			h1{
+				font-size: 170%;
+			}
+			ul{display:none;}
+
+			.mobile-icon{
+				float: right;
+				margin-top: 30px;
+				margin-right: 20px;
+				color: white;
+				display: inline-block;
+			}
+			ul{
+				float: left;
+			}
+
+			.main-nav li{
+				margin-top: 10px;
+				display: block;
+			}
+		}
+		@media only screen and (max-width:540px)
+		{
+			.btn1{
+				font-size: 140%;
+				margin-bottom: 30px;
+			}
+		}
+
+		@media only screen and (max-width:495px)
+		{
+			.btn1{
+				font-size: 140%;
+				margin-bottom: 30%;
+			}
+		}

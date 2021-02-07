@@ -1,114 +1,47 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title align>BB cafe</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquerymin.js"></script>
-  <style type="text/css">
-   h1
-   {
-    position:relative; 
-    color:red;
-    text-align:center;
-    font-size:58px;
-    text-decoration:underline;
-    font-style:italic;
-    border-style:groove;
-    border-radius:10px;
-    border-color:orange;
-    text-shadow:2px 2px 3px darkblue;
-   }
-   td.c1
-   {
-    color:khaki;
-    text-shadow:2px 2px 3px yellow;
-    text-decoration:underline;
-   }
-   body
-   {
-    font-size:30px;
-    font-family:comic sans ms;
-    background-color:black;
-   }
-   option.c1
-   {
-    color:red;
-   }
-   a:visited
-   {
-     color:purple;
-   }
-   a:hover
-   {
-     color:darkblue;
-     text-decoration:none;
-     font-family:Calibri;
-   }
-   a:active
-   {
-     color:khaki;
-     text-decoration:through;
-     font-family:Calibri;
-   }
-   #b
-   {
-     background-color:Lime;
-     color:purple;
-     width:130px;
-     border:none;
-     font-size:30px;
-   }
-   #b1
-   {
-     background-color:Red;
-     color:darkblue;
-     width:120px;
-     border:none;
-     font-size:30px;
-   }
-  </style>
- </head>   
- <body>
-  <h1>&dagger;   BB CAFE   &dagger;</h1>
-  <img src="pexels-photo-597933.jpeg" alt="mypic" align="right" width="1300px"/>
-  <form action="cafe.php" method="post">
-   <table cellpadding="30px">
-    <tr>
-     <td class="c1">Username</td>
-     <td><input type="text" name="username" required/></td>
-    </tr>
-    <tr>
-     <td class="c1" id="p1">Password</td>
-     <td><input type="password" name="password" required/></td>
-    </tr>
-    <tr>
-     <td class="c1">Gender</td>
-     <td  style="color:pink;"><input type="radio" name="gender" required/>Male <input type="radio" name="gender" required/>Female</td>
-    </tr>
-    <tr>
-     <td class="c1">Favourites</td>
-     <td style="color:lime;"><input type="checkbox" name="Italian"/>Italian <input type="checkbox" name="Chinese"/>Chinese</td>
-    </tr>
-    <tr>
-     <td class="c1">City</td>
-     <td><select style="width:120px;height:35px;">
-      <option class="c1">Mumbai</option>
-      <option class="c1">Bhuj</option>
-      <option class="c1">Hyderabad</option>
-     </select></td>
-    </tr>
-    <tr>
-     <td><input type="Submit" value="Register" onclick="successfully()" id="b"/></td>
-     <td ><input type="Reset" id="b1"/></td>
-    </tr>
-   </table>
-  </form>
-   <a href="Menu.html">Click Here to View BB Menu</a><br/><br/>
-   <a href="Ambiance.html">Click Here to View BB Ambiance</a>
-  <script>
-   function successfully()
-   {
-     alert("Registered Successfully!!!");
-   }
-  </script>
- </body>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BB Cafe</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" 
+	 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header id="header" class="head">
+		<nav>
+			<div class="d1 clearfix">
+				<ul class="main-nav animate__animated animate__slideInDown" id="b1">
+					<li><a href="D:/html%20project/home.html">Sign Up</a></li>
+					<li><a href="file:///D:/html%20project/Menu.html">Menu</a></li>
+					<li><a href="file:///D:/html%20project/dicegame.html">Play</a></li>
+					<li><a href="file:///D:/html%20project/Ambiance.html">About Us</a></li>
+				</ul>
+				<a href="#" class="mobile-icon" onclick="slide();">
+				<i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>		
+		</nav>
+		<div class="d2">
+			<h1>Welcome To The World Of <span>BB Cafe</span><br/>
+			    House Of <span>Foodies.</span></h1><br>
+			<a 	href="#" class="btn1">How To Order</a>
+			<a 	href="#" class="btn2">Wishlist</a>
+		</div>	
+	</header>
+	<script type="text/javascript" charset="utf-8">
+	function slide(){
+		var b=document.getElementById("b1")
+		if(b.style.display==="none"){
+			b.style.display="block";
+		}
+		else{
+			b.style.display="none";
+		}
+	}
+</script>
+</body>
 </html>
